@@ -32,7 +32,7 @@
 			so.addChild("可選擇當下控制哪個虹膜", 1, true);
 			so.addChild("按滑鼠左鍵控制虹膜移動，右鍵停止", 2, true);////
 			so.addChild("複製參數至對應目標參數", 2, true);
-			so.addChild("可儲存虹膜轉動角度", 1, false);
+			so.addChild("可儲存虹膜轉動角度", 1, true);
 			//產生自評表，參數如下所示
 			so.renderModal(
 				document.body,
@@ -640,6 +640,15 @@
 				scene3.add(clone3);
 				scene4.add(clone4);
 				scene5.add(clone5);
+
+				clone2.getObjectByName('左目').rotation.x = Math.PI / 180 * XNA[mode];
+				clone2.getObjectByName('右目').rotation.x = Math.PI / 180 * XNA[mode];
+				clone3.getObjectByName('左目').rotation.x = Math.PI / 180 * XPA[mode];
+				clone3.getObjectByName('右目').rotation.x = Math.PI / 180 * XPA[mode];
+				clone4.getObjectByName('左目').rotation.y = Math.PI / 180 * LYNA[mode];
+				clone4.getObjectByName('右目').rotation.y = Math.PI / 180 * RYNA[mode];
+				clone5.getObjectByName('左目').rotation.y = Math.PI / 180 * LYPA[mode];
+				clone5.getObjectByName('右目').rotation.y = Math.PI / 180 * RYPA[mode];
 
 				// console.log(clone2.getObjectByName('左目').position);
 
